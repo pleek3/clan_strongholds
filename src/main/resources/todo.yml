@@ -1,0 +1,6 @@
+Während der Bauphase immerwieder an zufälligen Positonen (innerhalb des Strongholds) so "Baupartikel und Effekte" abspielen:
+
+  BUGS:
+    - Beim initialen droppen von Ressourcen wird der Amount nicht gezählt.
+    - Die Strongholds werden nicht automatisch aus der Config geladen
+    - Das speichern der Strongholds funktioniert nicht richtig

@@ -1,0 +1,12 @@
+name: MineQuestStrongholds
+version: 1.0
+author: TeamHardcore
+main: de.teamhardcore.strongholds.bukkit.MineQuestStrongholdPlugin
+depend:
+  - ProtocolLib
+
+commands:
+  clanstrongholdsetup:
+    aliases:
+      - strongholdsetup
+    description: Setup-Befehl fuer die Clan Stuetzpunkte
