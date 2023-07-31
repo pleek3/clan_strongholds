@@ -1,6 +1,7 @@
 package de.teamhardcore.strongholds.bukkit.game.listener;
 
 import de.teamhardcore.strongholds.bukkit.game.building.Stronghold;
+import de.teamhardcore.strongholds.bukkit.game.building.StrongholdCaptureType;
 import de.teamhardcore.strongholds.bukkit.game.phases.AttackPhase;
 import de.teamhardcore.strongholds.bukkit.game.phases.CollectingPhase;
 import de.teamhardcore.strongholds.bukkit.game.service.StrongholdGameService;
@@ -41,6 +42,10 @@ public class PlayerListener implements Listener {
             return;
         }
 
+        if (!stronghold.getConfig().getCaptureType().equals(StrongholdCaptureType.COLLECT_BLOCKS)) {
+            return;
+        }
+
         if (!(stronghold.getPhase() instanceof CollectingPhase)) {
             return;
         }
@@ -72,6 +77,10 @@ public class PlayerListener implements Listener {
         }
 
         if (stronghold == null) {
+            return;
+        }
+
+        if (!stronghold.getConfig().getCaptureType().equals(StrongholdCaptureType.BREAK_BLOCK)) {
             return;
         }
 

@@ -1,5 +1,6 @@
 package de.teamhardcore.strongholds.bukkit.configs;
 
+import de.teamhardcore.strongholds.bukkit.game.building.StrongholdCaptureType;
 import de.teamhardcore.strongholds.bukkit.game.resources.ResourceContainer;
 import de.teamhardcore.strongholds.bukkit.team.Team;
 import de.teamhardcore.strongholds.bukkit.utils.LocationUtil;
@@ -26,6 +27,8 @@ public class BuildingConfig extends FileBase {
     private final String name;
     private Location maxPos;
     private Location minPos;
+
+    private StrongholdCaptureType captureType;
 
     private String collectingPhaseSchematicFileName;
     private String attackPhaseSchematicFileName;
@@ -77,6 +80,7 @@ public class BuildingConfig extends FileBase {
         this.rotation = 0;
         this.collectingPhaseSchematicFileName = "b1";
         this.attackPhaseSchematicFileName = "b2";
+        this.captureType = StrongholdCaptureType.BREAK_BLOCK;
     }
 
     public boolean isCollectable(final Material material) {
